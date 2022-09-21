@@ -2,4 +2,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+#grid-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+}
+#grid-container .grid-cell {
+  border: 1px #000 solid;
+  padding: 1em;
 }/*# sourceMappingURL=styles.css.map */
