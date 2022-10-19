@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     var gridContainer = document.getElementById("grid-container");
+    var inputColorValue = document.getElementById("brush-color");
 
     for (let i = 0; i < 900; i++) {
         let gridCell = document.createElement("div");
@@ -21,9 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let i = 0; i < 900; i++) {
         gridCells[i].addEventListener('mousemove', function(){
             if(mouseIsDown){
-                gridCells[i].style.backgroundColor = "#333";
+                gridCells[i].style.backgroundColor = inputColorValue.value;
             }
         })
     }
-    
 });
