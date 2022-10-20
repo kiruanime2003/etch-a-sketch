@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var gridContainer = document.getElementById("grid-container");
     var inputColorValue = document.getElementById("brush-color");
+    var buttonsList = Array.from(document.getElementsByClassName("buttons"));
 
     for (let i = 0; i < 900; i++) {
         let gridCell = document.createElement("div");
@@ -9,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     var gridCells = Array.from(document.getElementsByClassName("grid-cell"));
-    var mouseIsDown = false
+    var mouseIsDown = false;
 
     for (let i = 0; i < 900; i++) {
         gridCells[i].addEventListener('mousedown', function () { mouseIsDown = true });
@@ -20,10 +21,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     for (let i = 0; i < 900; i++) {
-        gridCells[i].addEventListener('mousemove', function(){
-            if(mouseIsDown){
+        gridCells[i].addEventListener('mousemove', function () {
+            if (mouseIsDown) {
                 gridCells[i].style.backgroundColor = inputColorValue.value;
             }
         })
     }
+
+    buttonsList[1].addEventListener("click", function () {
+        for (let i = 0; i < 900; i++) {
+            gridCells[i].style.backgroundColor = "#fff";
+        }
+    });
 });
