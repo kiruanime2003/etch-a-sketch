@@ -1,3 +1,14 @@
+//font-family: 'Ubuntu', sans-serif;
+
+$lightGray: #D4D2D5;
+$darkLava: #463F3A;
+$sizzlingRed: #EF5D60;
+$white: #fff;
+
+body{
+    background-color: $lightGray;
+}
+
 *, ::after, ::before{
     margin: 0;
     padding: 0;
@@ -14,7 +25,8 @@
     transform: translate(-50%, -50%);
 
     .grid-cell{
-        border: 1px #000 solid;
+        border: 1px $darkLava solid;
+        background-color: $white;
         padding: 7px;
     }
 }
