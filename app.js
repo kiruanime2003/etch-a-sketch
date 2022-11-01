@@ -33,4 +33,11 @@ document.addEventListener("DOMContentLoaded", function () {
             gridCells[i].style.backgroundColor = "#fff";
         }
     });
+
+    buttonsList[2].addEventListener("click", function(){
+        let art = document.getElementById("grid-container");
+        html2canvas(art).then(canvas => {
+            document.body.appendChild(canvas);
+        });
+    });
 });

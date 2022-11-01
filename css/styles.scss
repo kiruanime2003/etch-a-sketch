@@ -60,4 +60,8 @@ form{
         background-color: $sizzlingRed;
         letter-spacing: 0.1px;
     }
+
+    .buttons:hover{
+        cursor: pointer;
+    }
 }
