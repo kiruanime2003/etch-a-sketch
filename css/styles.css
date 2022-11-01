@@ -25,6 +25,7 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 #grid-container .grid-cell {
   border: 1px #463F3A solid;
   background-color: #fff;
@@ -37,6 +38,7 @@ form label {
   color: #463F3A;
   letter-spacing: 0.1px;
 }
+
 form .buttons {
   padding: 7px 14px;
   border-radius: 4px;
