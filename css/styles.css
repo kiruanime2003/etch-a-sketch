@@ -31,20 +31,29 @@ h1 {
   padding: 7px;
 }
 
-form label {
-  font-weight: 500;
-  font-size: 20px;
+form {
+  margin: 140px 0px 0px 200px;
+}
+form #label {
+  font-weight: 700;
+  font-size: 22px;
   color: #463F3A;
-  letter-spacing: 0.1px;
+  letter-spacing: -0.4px;
+  margin: 0px 0px 0px 0px;
+  word-wrap: break-word;
+  width: 120px;
+}
+form input {
+  margin: 0px 0px 30px 0px;
 }
 form .buttons {
   padding: 7px 14px;
   border-radius: 4px;
   border: 2px #EF5D60 solid;
-  margin: 10px 0;
+  margin: 10px 0px 5px 0px;
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
-  font-size: 17px;
+  font-size: 19px;
   color: #fff;
   background-color: #EF5D60;
   letter-spacing: 0.1px;
