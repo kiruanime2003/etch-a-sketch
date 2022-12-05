@@ -75,3 +75,9 @@ form{
         cursor: pointer;
     }
 }
+
+@media screen and (max-width: 1213px){
+    form{
+        margin: 140px 0px 0px 80px;
+    }
+}

@@ -60,4 +60,10 @@ form .buttons {
 }
 form .buttons:hover {
   cursor: pointer;
+}
+
+@media screen and (max-width: 1213px) {
+  form {
+    margin: 140px 0px 0px 80px;
+  }
 }/*# sourceMappingURL=styles.css.map */
