@@ -29,6 +29,17 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     }
 
+    //reinitializing color
+    inputColorValue.addEventListener("click", function () {
+        for (let i = 0; i < 900; i++) {
+            gridCells[i].addEventListener('mousemove', function () {
+                if (mouseIsDown) {
+                    gridCells[i].style.backgroundColor = inputColorValue.value;
+                }
+            })
+        }
+    });
+
     //eraser button
     buttonsList[0].addEventListener("click", function () {
         for (let i = 0; i < 900; i++) {
