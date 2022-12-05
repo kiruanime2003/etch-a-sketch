@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         gridContainer.appendChild(gridCell).className = "grid-cell";
     }
 
+    //color button
     var gridCells = Array.from(document.getElementsByClassName("grid-cell"));
     var mouseIsDown = false;
 
@@ -28,16 +29,21 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     }
 
+    //eraser button
+    buttonsList[0].addEventListener("click", function () {
+        for (let i = 0; i < 900; i++) {
+            gridCells[i].addEventListener('mousemove', function () {
+                if (mouseIsDown) {
+                    gridCells[i].style.backgroundColor = "#fff";
+                }
+            })
+        }
+    });
+
+    //clear button
     buttonsList[1].addEventListener("click", function () {
         for (let i = 0; i < 900; i++) {
             gridCells[i].style.backgroundColor = "#fff";
         }
-    });
-
-    buttonsList[2].addEventListener("click", function(){
-        let art = document.getElementById("grid-container");
-        html2canvas(art).then(canvas => {
-            document.body.appendChild(canvas);
-        });
     });
 });
