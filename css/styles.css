@@ -71,6 +71,9 @@ form .buttons:hover {
     grid-template-columns: repeat(30, 1fr);
     grid-template-rows: repeat(30, 1fr);
   }
+  h1 {
+    font-size: 23px;
+  }
   form {
     margin: auto;
     display: flex;
@@ -78,7 +81,7 @@ form .buttons:hover {
     justify-content: center;
     align-items: center;
     position: relative;
-    top: 600px;
+    top: 550px;
   }
   form #label {
     font-size: 18px;
@@ -91,6 +94,10 @@ form .buttons:hover {
   #grid-container {
     grid-template-columns: repeat(27, 1fr);
     grid-template-rows: repeat(27, 1fr);
+    top: 45%;
+  }
+  form {
+    top: 480px;
   }
 }
 @media screen and (max-width: 800px) {
@@ -103,5 +110,9 @@ form .buttons:hover {
   #grid-container {
     grid-template-columns: repeat(14, 1fr);
     grid-template-rows: repeat(14, 1fr);
+    top: 30%;
+  }
+  form {
+    top: 300px;
   }
 }/*# sourceMappingURL=styles.css.map */
