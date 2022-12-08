@@ -13,4 +13,5 @@ A simple Etch a sketch made using Vanilla JS. Choose a brush color and start dra
 
 ### Author
 
-Kiruthiga K - [Portfolio site](https://kiruanime2003.gitlab.io/)
+- Kiruthiga K - [Portfolio site](https://kiruanime2003.gitlab.io/)
+- My Dribbble site - [@kiruanime2003](https://dribbble.com/kiruanime2003)
