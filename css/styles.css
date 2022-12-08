@@ -3,7 +3,9 @@ body {
   font-family: "Ubuntu", sans-serif;
 }
 
-*, ::after, ::before {
+*,
+::after,
+::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -17,12 +19,7 @@ h1 {
 }
 
 #grid-container {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   display: grid;
-  grid-template-columns: repeat(30, 1fr);
-  grid-template-rows: repeat(30, 1fr);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -70,8 +67,16 @@ form .buttons:hover {
     margin: 140px 0px 0px 80px;
   }
   #grid-container {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+    grid-template-columns: repeat(30, 1fr);
+    grid-template-rows: repeat(30, 1fr);
+  }
+}
+@media screen and (max-width: 935px) {
+  form {
+    margin: 140px 0px 0px 80px;
+  }
+  #grid-container {
+    grid-template-columns: repeat(27, 1fr);
+    grid-template-rows: repeat(27, 1fr);
   }
 }/*# sourceMappingURL=styles.css.map */

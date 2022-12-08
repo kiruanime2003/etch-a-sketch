@@ -4,48 +4,48 @@ $lightGray: #D4D2D5;
 $darkLava: #463F3A;
 $sizzlingRed: #EF5D60;
 $white: #fff;
+$gridNumber: 0;
 
-body{
+body {
     background-color: $lightGray;
     font-family: 'Ubuntu', sans-serif;
 }
 
-*, ::after, ::before{
+*,
+::after,
+::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-h1{
+h1 {
     text-align: center;
     color: $darkLava;
     font-size: 30px;
     margin-top: 50px;
 }
 
-#grid-container{
-    width: fit-content;
+#grid-container {
     display: grid;
-    grid-template-columns: repeat(30, 1fr);
-    grid-template-rows: repeat(30, 1fr);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
-    .grid-cell{
+    .grid-cell {
         border: 1px $darkLava solid;
         background-color: $white;
         padding: 7px;
     }
 }
 
-form{
+form {
 
     margin: 140px 0px 0px 200px;
     //top right bottom left
 
-    #label{
+    #label {
         font-weight: 700;
         font-size: 22px;
         color: $darkLava;
@@ -55,11 +55,11 @@ form{
         width: 120px;
     }
 
-    input{
+    input {
         margin: 0px 0px 30px 0px;
     }
 
-    .buttons{
+    .buttons {
         padding: 7px 14px;
         border-radius: 4px;
         border: 2px $sizzlingRed solid;
@@ -72,17 +72,31 @@ form{
         letter-spacing: 0.1px;
     }
 
-    .buttons:hover{
+    .buttons:hover {
         cursor: pointer;
     }
 }
 
-@media screen and (max-width: 1213px){
-    form{
+@media screen and (max-width: 1213px) {
+    form {
         margin: 140px 0px 0px 80px;
     }
 
-    #grid-container{
-        width: fit-content;
+    #grid-container {
+        $gridNumber:30;
+        grid-template-columns: repeat($gridNumber, 1fr);
+        grid-template-rows: repeat($gridNumber, 1fr);
+    }
+}
+
+@media screen and (max-width: 935px) {
+    form {
+        margin: 140px 0px 0px 80px;
+    }
+
+    #grid-container {
+        $gridNumber:27;
+        grid-template-columns: repeat($gridNumber, 1fr);
+        grid-template-rows: repeat($gridNumber, 1fr);
     }
 }
