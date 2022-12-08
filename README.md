@@ -1,6 +1,6 @@
 # Elementary Etch a sketch
 
-A simple Etch a sketch made using Vanilla JS.
+A simple Etch a sketch made using Vanilla JS. Choose a brush color and start drawing😊
 
 ![](./screenshot.png)
 
