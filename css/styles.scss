@@ -24,6 +24,7 @@ h1{
 }
 
 #grid-container{
+    width: fit-content;
     display: grid;
     grid-template-columns: repeat(30, 1fr);
     grid-template-rows: repeat(30, 1fr);
@@ -79,5 +80,9 @@ form{
 @media screen and (max-width: 1213px){
     form{
         margin: 140px 0px 0px 80px;
+    }
+
+    #grid-container{
+        width: fit-content;
     }
 }

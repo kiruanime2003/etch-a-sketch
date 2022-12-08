@@ -17,6 +17,9 @@ h1 {
 }
 
 #grid-container {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   display: grid;
   grid-template-columns: repeat(30, 1fr);
   grid-template-rows: repeat(30, 1fr);
@@ -65,5 +68,10 @@ form .buttons:hover {
 @media screen and (max-width: 1213px) {
   form {
     margin: 140px 0px 0px 80px;
+  }
+  #grid-container {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }/*# sourceMappingURL=styles.css.map */

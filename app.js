@@ -3,11 +3,13 @@ document.addEventListener("DOMContentLoaded", function () {
     var gridContainer = document.getElementById("grid-container");
     var inputColorValue = document.getElementById("brush-color");
     var buttonsList = Array.from(document.getElementsByClassName("buttons"));
-    var n=0;
-    n=30*10;
 
-    /*if(window.innerWidth <= 977) n=400;
-    else if(window.innerWidth*/
+    let w = window.innerWidth;
+
+    var n=0;
+
+    if(w <= 1213) n=200;
+    else if(w)
 
     for (let i = 0; i < n; i++) {
         let gridCell = document.createElement("div");
