@@ -23,6 +23,10 @@ document.addEventListener("DOMContentLoaded", function () {
         n =576;
         gridCreation(n);
     }
+    else{
+        n=196;
+        gridCreation(n);
+    }
 
     //refreshing page when the viewport changes
     window.onresize = function(event)

@@ -124,3 +124,12 @@ form {
         grid-template-rows: repeat($gridNumber, 1fr);
     }
 }
+
+@media screen and (max-width: 600px) {
+
+    #grid-container {
+        $gridNumber:14;
+        grid-template-columns: repeat($gridNumber, 1fr);
+        grid-template-rows: repeat($gridNumber, 1fr);
+    }
+}
