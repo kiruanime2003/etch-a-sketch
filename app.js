@@ -19,6 +19,12 @@ document.addEventListener("DOMContentLoaded", function () {
         gridCreation(n);
     }
 
+    //refreshing page when the viewport changes
+    window.onresize = function(event)
+    {
+        history.go(0);
+    }
+
     function gridCreation(a) {
 
         for (let i = 0; i < a; i++) {
