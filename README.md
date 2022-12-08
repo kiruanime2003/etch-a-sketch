@@ -2,6 +2,8 @@
 
 A simple Etch a sketch made using Vanilla JS.
 
+![](./screenshot.png)
+
 ## How to use
 
 - Click and drag on the grid to draw
