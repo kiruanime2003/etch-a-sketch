@@ -54,8 +54,7 @@ form {
         color: $darkLava;
         letter-spacing: -0.4px;
         margin: 0px 0px 0px 0px;
-        word-wrap: break-word;
-        width: 120px;
+        text-align: justify;
     }
 
     input {
@@ -73,6 +72,7 @@ form {
         color: $white;
         background-color: $sizzlingRed;
         letter-spacing: 0.1px;
+        height: fit-content;
     }
 
     .buttons:hover {
@@ -81,21 +81,33 @@ form {
 }
 
 @media screen and (max-width: 1213px) {
-    form {
-        margin: 140px 0px 0px 80px;
-    }
 
     #grid-container {
         $gridNumber:30;
         grid-template-columns: repeat($gridNumber, 1fr);
         grid-template-rows: repeat($gridNumber, 1fr);
     }
+
+    form {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 600px;
+
+        #label{
+            font-size: 18px;
+        }
+    
+        .buttons{
+            font-size: 17px;
+        }
+    }
 }
 
 @media screen and (max-width: 935px) {
-    form {
-        margin: 140px 0px 0px 80px;
-    }
 
     #grid-container {
         $gridNumber:27;
@@ -105,9 +117,6 @@ form {
 }
 
 @media screen and (max-width: 800px) {
-    form {
-        margin: 140px 0px 0px 80px;
-    }
 
     #grid-container {
         $gridNumber:24;
