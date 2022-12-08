@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //refreshing page when the viewport changes
     window.onresize = function(event)
     {
-        history.go(0);
+        history.go(0); //to reload a page
     }
 
     function gridCreation(a) {
