@@ -7,13 +7,20 @@ document.addEventListener("DOMContentLoaded", function () {
     let w = window.innerWidth;
     var n;
 
-    if (w <= 1213 && w >= 935) {
+    if(w>1213){
         n = 900;
         gridCreation(n);
     }
-
+    else if (w <= 1213 && w >= 935) {
+        n = 900;
+        gridCreation(n);
+    }
     else if (w < 935 && w >= 800) {
         n =729;
+        gridCreation(n);
+    }
+    else if(w < 800 && w >= 600){
+        n =576;
         gridCreation(n);
     }
 

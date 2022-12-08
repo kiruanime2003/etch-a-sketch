@@ -32,6 +32,9 @@ h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    $gridNumber:30;
+    grid-template-columns: repeat($gridNumber, 1fr);
+    grid-template-rows: repeat($gridNumber, 1fr);
 
     .grid-cell {
         border: 1px $darkLava solid;
@@ -96,6 +99,18 @@ form {
 
     #grid-container {
         $gridNumber:27;
+        grid-template-columns: repeat($gridNumber, 1fr);
+        grid-template-rows: repeat($gridNumber, 1fr);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    form {
+        margin: 140px 0px 0px 80px;
+    }
+
+    #grid-container {
+        $gridNumber:24;
         grid-template-columns: repeat($gridNumber, 1fr);
         grid-template-rows: repeat($gridNumber, 1fr);
     }
