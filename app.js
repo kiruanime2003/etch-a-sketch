@@ -41,10 +41,10 @@ document.addEventListener("DOMContentLoaded", function () {
             gridContainer.appendChild(gridCell).className = "grid-cell";
         }
 
+        //color button
         var gridCells = Array.from(document.getElementsByClassName("grid-cell"));
         var mouseIsDown = false;
 
-        //color button
         for (let i = 0; i < a; i++) {
             gridCells[i].addEventListener('mousedown', function () { mouseIsDown = true });
         }
@@ -56,6 +56,25 @@ document.addEventListener("DOMContentLoaded", function () {
         for (let i = 0; i < a; i++) {
             gridCells[i].addEventListener('mousemove', function () {
                 if (mouseIsDown) {
+                    gridCells[i].style.backgroundColor = inputColorValue.value;
+                }
+            })
+        }
+
+        //touch event
+        var touchIsDown = false;
+
+        for (let i = 0; i < a; i++) {
+            gridCells[i].addEventListener('touchstart', function () { touchIsDown = true });
+        }
+
+        for (let i = 0; i < a; i++) {
+            gridCells[i].addEventListener('touchend', function () { touchIsDown = false });
+        }
+
+        for (let i = 0; i < a; i++) {
+            gridCells[i].addEventListener('touchmove', function () {
+                if (touchIsDown) {
                     gridCells[i].style.backgroundColor = inputColorValue.value;
                 }
             })
