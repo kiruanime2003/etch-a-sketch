@@ -3,11 +3,11 @@ document.addEventListener("DOMContentLoaded", function () {
     var gridContainer = document.getElementById("grid-container");
     var inputColorValue = document.getElementById("brush-color");
     var buttonsList = Array.from(document.getElementsByClassName("buttons"));
-    
+
     let w = window.innerWidth;
     var n;
 
-    if(w>1213){
+    if (w > 1213) {
         n = 900;
         gridCreation(n);
     }
@@ -16,21 +16,20 @@ document.addEventListener("DOMContentLoaded", function () {
         gridCreation(n);
     }
     else if (w < 935 && w >= 800) {
-        n =729;
+        n = 729;
         gridCreation(n);
     }
-    else if(w < 800 && w >= 600){
-        n =576;
+    else if (w < 800 && w >= 600) {
+        n = 576;
         gridCreation(n);
     }
-    else{
-        n=196;
+    else {
+        n = 196;
         gridCreation(n);
     }
 
     //refreshing page when the viewport changes
-    window.onresize = function(event)
-    {
+    window.onresize = function (event) {
         history.go(0); //to reload a page
     }
 
@@ -41,8 +40,16 @@ document.addEventListener("DOMContentLoaded", function () {
             gridContainer.appendChild(gridCell).className = "grid-cell";
         }
 
-        //color button
         var gridCells = Array.from(document.getElementsByClassName("grid-cell"));
+
+        //touch event
+        for (let i = 0; i < a; i++) {
+            gridCells[i].addEventListener('touchend', function () {
+                gridCells[i].style.backgroundColor = inputColorValue.value;
+            })
+        }
+
+        //color button
         var mouseIsDown = false;
 
         for (let i = 0; i < a; i++) {
@@ -61,28 +68,10 @@ document.addEventListener("DOMContentLoaded", function () {
             })
         }
 
-        //touch event
-        var touchIsDown = false;
-
-        for (let i = 0; i < a; i++) {
-            gridCells[i].addEventListener('touchstart', function () { touchIsDown = true });
-        }
-
-        for (let i = 0; i < a; i++) {
-            gridCells[i].addEventListener('touchend', function () { touchIsDown = false });
-        }
-
-        for (let i = 0; i < a; i++) {
-            gridCells[i].addEventListener('touchmove', function () {
-                if (touchIsDown) {
-                    gridCells[i].style.backgroundColor = inputColorValue.value;
-                }
-            })
-        }
 
         //reinitializing color
         inputColorValue.addEventListener("click", function () {
-            for (let i = 0; i <a; i++) {
+            for (let i = 0; i < a; i++) {
                 gridCells[i].addEventListener('mousemove', function () {
                     if (mouseIsDown) {
                         gridCells[i].style.backgroundColor = inputColorValue.value;
